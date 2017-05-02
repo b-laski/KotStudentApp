@@ -1,0 +1,12 @@
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\KotStudentApp.Core.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\KotStudentApp.Core.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Ninject.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\StudentAPI.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Newtonsoft.Json.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Utilities.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Artefact.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Ninject.xml
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\StudentAPI.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Newtonsoft.Json.xml
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Release\KotStudentApp.Core.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Release\KotStudentApp.Core.pdb

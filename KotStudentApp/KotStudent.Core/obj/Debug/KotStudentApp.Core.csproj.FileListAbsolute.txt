@@ -1,0 +1,13 @@
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\KotStudent.Core.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\KotStudent.Core.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Ninject.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Ninject.xml
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\Debug\KotStudent.Core.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\Debug\KotStudent.Core.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\Debug\KotStudentApp.Core.csprojResolveAssemblyReference.cache
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\StudentAPI.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Newtonsoft.Json.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Utilities.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Artefact.dll
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\StudentAPI.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\Debug\Newtonsoft.Json.xml

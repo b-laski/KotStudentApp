@@ -1,0 +1,16 @@
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\KotStudentApp.csprojResolveAssemblyReference.cache
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Menu.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuItem.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuListItem.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PageHost.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Profile\Profile.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\MainWindow.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\DashboardPage.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\LoginPage.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\RegisterPage.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\UserProfilPage.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Windows\LoginSocialWindow.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\App.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\KotStudentApp_MarkupCompile.cache
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\KotStudentApp_MarkupCompile.lref
