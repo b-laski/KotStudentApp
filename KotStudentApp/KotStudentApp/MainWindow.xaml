@@ -51,31 +51,21 @@
                                     <Grid Grid.Row="0" Background="{DynamicResource PrimaryHueDarkBrush}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <!--MenuButton-->
-                                        <CheckBox WindowChrome.IsHitTestVisibleInChrome="True"
-                                                  Margin="16 8"
-                                                  Foreground="{DynamicResource PrimaryHueMidForegroundBrush}" 
-                                                  Style="{DynamicResource MaterialDesignHamburgerToggleButton}"
-                                                  VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"
-                                                  Width="24"
-                                                  Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"/>
                                         <!--Title-->
-                                        <TextBlock Grid.Column="1" 
+                                        <TextBlock Grid.Column="0" 
                                                    Text="{Binding Title}" 
                                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                                    VerticalAlignment="Center"
-                                                   Margin="8 8 8 8"/>
+                                                   Margin="16 8 8 8"/>
 
                                         <!-- Profile/Message... -->
-                                        <Grid Grid.Column="3" 
+                                        <Grid Grid.Column="2" 
                                               VerticalAlignment="Center"
                                               local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.TitleMenu, 
                                                     Source={x:Static local:ViewModelLocator.Instance}}">
@@ -103,7 +93,7 @@
                                             </StackPanel>
                                         </Grid>
 
-                                        <StackPanel Grid.Column="4" 
+                                        <StackPanel Grid.Column="3" 
                                                     Orientation="Horizontal"
                                                      >
                                             <Separator Width="2" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
@@ -112,13 +102,13 @@
                                         <Grid Grid.Column="4"
                                               VerticalAlignment="Center">
                                             <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal">
-                                                
+
                                                 <Button Foreground="{DynamicResource PrimaryHueMidForegroundBrush}" 
                                                         Style="{DynamicResource MaterialDesignFlatButton}"
                                                         Command="{Binding MinimalizeCommand}"
                                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                                         VerticalAlignment="Center">
-                                                    
+
                                                     <materialDesign:PackIcon Kind="WindowMinimize"/>
                                                 </Button>
 
@@ -127,7 +117,7 @@
                                                         Command="{Binding MaximalizationCommand}"
                                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                                         VerticalAlignment="Center">
-                                                    
+
                                                     <materialDesign:PackIcon Kind="WindowMaximize"/>
                                                 </Button>
 
@@ -136,20 +126,29 @@
                                                         Command="{Binding CloseCommand}"
                                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                                         VerticalAlignment="Center">
-                                                    
+
                                                     <materialDesign:PackIcon Kind="WindowClose"/>
                                                 </Button>
-                                                    
+
                                             </StackPanel>
                                         </Grid>
                                     </Grid>
-
+                                    
                                     <!--Content-->
                                     <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" ClipToBounds="True">
                                         <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
                                 </Grid>
 
+                                <Rectangle Fill="Black"
+                                           Visibility="Collapsed"
+                                           WindowChrome.IsHitTestVisibleInChrome="True"
+                                           local:ShowHideRectangle.Value="True"/>
+                                <local:Menu Width="300"
+                                            HorizontalAlignment="Left"
+                                            WindowChrome.IsHitTestVisibleInChrome="True"
+                                            local:ShowHideMenuAnimation.Value="True"
+                                            Effect="{DynamicResource MaterialDesignShadowDepth3}"/>
                             </Grid>
 
                         </Border>
@@ -169,29 +168,34 @@
     </WindowChrome.WindowChrome>
 
     <!--Content-->
-    <Border Background="White">
+    <Border Background="{DynamicResource MaterialDesignPaper}">
         <Grid>
-            
+            <!--Background-->
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--TopBar-->
+                    <RowDefinition Height="Auto" />
+                    <!--Content-->
+                    <RowDefinition />
+                </Grid.RowDefinitions>
 
-            <local:Menu Panel.ZIndex="1"
-                Width="56"
-                local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.TitleMenu, 
-                                                    Source={x:Static local:ViewModelLocator.Instance}}"/>
-            <local:PageHost Grid.Column="1"
-                            d:DataContext=""
-                            DataContext="{Binding ApplicationViewModel.CurrentPage, 
-                                            Source={x:Static local:ViewModelLocator.Instance}, 
-                                            Converter={local:ApplicationPageValueConverter}}"
-                            CurrentPage="{Binding}" />           
+                <local:MainBar Grid.Row="0"
+                               local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.TitleMenu, 
+                                                            Source={x:Static local:ViewModelLocator.Instance}}"/>
+
+                <Border Grid.Row="1">
+                    <local:PageHost Grid.Column="1"
+                                    d:DataContext=""
+                                    DataContext="{Binding ApplicationViewModel.CurrentPage, 
+                                                    Source={x:Static local:ViewModelLocator.Instance}, 
+                                                    Converter={local:ApplicationPageValueConverter}}"
+                                    CurrentPage="{Binding}" />
+                </Border>
+            </Grid>
         </Grid>
-
     </Border>
 </Window>

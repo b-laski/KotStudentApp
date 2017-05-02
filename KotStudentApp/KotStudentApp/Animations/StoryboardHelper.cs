@@ -160,6 +160,40 @@ namespace KotStudentApp
             // Add this to the storyboard
             storyboard.Children.Add(animation);
         }
+
+        public static void AddFadeInForRectagle(this Storyboard storyboard, float seconds)
+        {
+            // Create the margin animate from right 
+            var animation = new DoubleAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = 0,
+                To = 0.3,
+            };
+
+            // Set the target property name
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
+
+            // Add this to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        public static void AddFadeOutForRectagle(this Storyboard storyboard, float seconds)
+        {
+            // Create the margin animate from right 
+            var animation = new DoubleAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = 0.3,
+                To = 0,
+            };
+
+            // Set the target property name
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
+
+            // Add this to the storyboard
+            storyboard.Children.Add(animation);
+        }
     }
 }
 

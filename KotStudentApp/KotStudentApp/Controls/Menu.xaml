@@ -4,83 +4,211 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KotStudentApp"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
              xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="56">
+             d:DesignHeight="600" d:DesignWidth="300">
 
     <UserControl.Template>
         <ControlTemplate TargetType="UserControl">
-             <Border Background="{DynamicResource MaterialDesignPaper}">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    
-                    <StackPanel Panel.ZIndex="2" 
-                                x:Name="pnlButtonMenu" 
-                                Orientation="Vertical"
-                                Grid.Row="0">
-                        
-                        <Button Style="{DynamicResource MaterialDesignToolButton}" 
-                                HorizontalContentAlignment="Left" Margin="0,8,0,0" 
-                                Height="56" 
-                                Command="{Binding Dashboard}">
-                            
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                
-                                <material:PackIcon Grid.Column="0" Kind="Home" Margin="12,0,0,0" Width="24" Height="24"/>
-                                <TextBlock x:Name="chatTextBlock" Grid.Column="1" Text="Chat" Margin="24,0,0,0" Visibility="Collapsed" />
-                            </Grid>
-                            
-                        </Button>
-                        
-                        <Button Style="{DynamicResource MaterialDesignToolButton}"  
-                                HorizontalContentAlignment="Left" Margin="0,8,0,0" 
-                                Height="56">
-                            
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                
-                                <material:PackIcon Grid.Column="0" Kind="BulletinBoard" Margin="12,0,0,0"  Width="24" Height="24"/>
-                                <TextBlock x:Name="dashboardTextBlock" Grid.Column="1" Text="Dashboard" Margin="24,0,0,0" Visibility="Collapsed" />
-                            </Grid>
-                            
-                        </Button>
-                        
-                        <Button Style="{DynamicResource MaterialDesignToolButton}" 
-                                Margin="0,8,0,0" HorizontalContentAlignment="Left" 
-                                Height="56">
-                            
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                
-                                <material:PackIcon Grid.Column="0" Kind="Settings" Margin="12,0,0,0" Width="24" Height="24" />
-                                <TextBlock x:Name="settingsTextBlock" Grid.Column="1" Text="Settings" Margin="24,0,0,0" Visibility="Collapsed" />
-                            </Grid>
-                            
-                        </Button>
-                        
-                        <Separator Width="Auto" 
-                                   Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
-                        
-                    </StackPanel>
+            <Border Background="{DynamicResource MaterialDesignPaper}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="1">
-                        <ContentPresenter Content="{TemplateBinding Content}"/>
-                    </Grid>
-                </Grid>
+                        <!--Profile-->
+                        <Border Grid.Row="0"
+                                Effect="{DynamicResource MaterialDesignShadowDepth1}">
+                            <Grid>
+                                <Grid.Background>
+                                    <ImageBrush ImageSource="D:\KotStudentApp\KotStudentApp\KotStudentApp\Images\Backgrounds\40-backgrounds-material.jpg" />
+                                </Grid.Background>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Bottom"
+                                        Margin="15 0">
+                                    <Border Background="White" 
+                                            Height="60"
+                                            Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                            CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+                                        <!-- Profile picture initials -->
+                                        <TextBlock Text="BŁ"
+                                                    FontSize="20"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+
+                                <StackPanel Grid.Row="1"
+                                            Margin="15 5 0 15">
+                                
+                                    <!--Name-->
+                                    <TextBlock Text="Bartłomiej Łaski"
+                                                Margin="0 5"
+                                                Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                                TextTrimming="CharacterEllipsis"/>
+                                
+                                    <!--E-mail-->
+                                    <TextBlock Text="tajfun695@gmail.com"
+                                                Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                                TextTrimming="CharacterEllipsis"/>
+                                
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!--Upeer part of menu-->
+                        <StackPanel Grid.Row="1">
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+                            
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="Home" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Strona główna"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="Star" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Ulubione"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="Group" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Grupy"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+
+                        </StackPanel>
+
+                        <!--Separator-->
+                        <Separator Grid.Row="2" 
+                                   Width="Auto" 
+                                   Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+                        
+                        <!--Down part of menu-->
+                        <StackPanel Grid.Row="3">
+                            
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="Settings" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Ustawienia"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="MailRu" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Podziel się wrażeniami"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button Background="Transparent" 
+                                    Height="56"
+                                    BorderBrush="Transparent"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0">
+
+                                <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                    <material:PackIcon Kind="Logout" 
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                    <TextBlock  Text="Wyloguj się"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Margin="10 0 0 0"
+                                                Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+                            </Button>
+                            
+                        </StackPanel>
+                    </Grid>                    
+                </ScrollViewer>
 
             </Border>           
         </ControlTemplate>

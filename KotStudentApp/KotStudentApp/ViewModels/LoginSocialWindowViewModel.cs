@@ -1,5 +1,4 @@
-﻿using KotStudent.Core;
-using KotStudentApp.Core;
+﻿using KotStudentApp.Core;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -34,12 +33,12 @@ namespace KotStudentApp
         /// <summary>
         /// The smallest width the window can go to
         /// </summary>
-        public double WindowMinimumWidth { get; set; } = 850;
+        public double WindowMinimumWidth { get; set; } = 950;
 
         /// <summary>
         /// The smallest height the window can go to
         /// </summary>
-        public double WindowMinimumHeight { get; set; } = 550;
+        public double WindowMinimumHeight { get; set; } = 700;
 
         /// <summary>
         /// True if the window should be borderless because it is docked or maximized

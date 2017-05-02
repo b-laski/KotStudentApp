@@ -124,5 +124,119 @@ namespace KotStudentApp
             // Wait for it to finish
             await Task.Delay((int)(seconds * 1000));
         }
+
+        public static async Task ShowMenu(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add slide from right animation
+            sb.AddSlideFromLeft(seconds, element.ActualWidth, keepMargin: keepMargin);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
+
+        public static async Task HideMenu(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add slide from right animation
+            sb.AddSlideToLeft(seconds, element.ActualWidth, keepMargin: keepMargin);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+
+            // Make page visible
+            element.Visibility = Visibility.Collapsed;
+        }
+
+        public static async Task FadeIn(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add fade in animation
+            sb.AddFadeIn(seconds);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
+
+        public static async Task FadeOut(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add fade in animation
+            sb.AddFadeOut(seconds);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+
+            // Make page visible
+            element.Visibility = Visibility.Collapsed;
+        }
+
+        public static async Task FadeInForRectagle(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add fade in animation
+            sb.AddFadeInForRectagle(seconds);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
+
+        public static async Task FadeOutForRectagle(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add fade in animation
+            sb.AddFadeOutForRectagle(seconds);
+
+            // Start animating
+            sb.Begin(element);
+
+            // Make page visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
     }
 }

@@ -22,13 +22,9 @@
             CurrentPage = page;
 
             if (CurrentPage != ApplicationPage.LoginScreen && CurrentPage != ApplicationPage.RegisterScreen)
-            {
                 TitleMenu = true;
-            }
             else
-            {
                 TitleMenu = false;
-            }
         }
     }
 }

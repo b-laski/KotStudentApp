@@ -84,4 +84,34 @@ namespace KotStudentApp
                 await element.SlideAndFadeOutToLeftAsync(FirstLoad ? 0 : 0.3f, keepMargin: false);
         }
     }
+
+    /// <summary>
+    /// Animates a framework element sliding it in from the left on show
+    /// and sliding out to the left on hide
+    /// </summary>
+    public class ShowHideMenuAnimation : AnimateBaseProperty<ShowHideMenuAnimation>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value)
+        {
+            if (value)
+                // Animate in
+                await element.ShowMenu(FirstLoad ? 0 : 0.3f, keepMargin: false);
+            else
+                // Animate out
+                await element.HideMenu(FirstLoad ? 0 : 0.3f, keepMargin: false);
+        }
+    }
+
+    public class ShowHideRectangle : AnimateBaseProperty<ShowHideRectangle>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value)
+        {
+            if (value)
+                // Animate in
+                await element.FadeInForRectagle(FirstLoad ? 0 : 0.3f, keepMargin: false);
+            else
+                // Animate out
+                await element.FadeOutForRectagle(FirstLoad ? 0 : 0.3f, keepMargin: false);
+        }
+    }
 }

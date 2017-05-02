@@ -10,3 +10,4 @@ D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\StudentAPI.pdb
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Release\Newtonsoft.Json.xml
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Release\KotStudentApp.Core.dll
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Release\KotStudentApp.Core.pdb
+D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Release\KotStudentApp.Core.csprojResolveAssemblyReference.cache

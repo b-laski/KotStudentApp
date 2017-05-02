@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KotStudentApp.Controls.MenuItems
+namespace KotStudentApp
 {
     /// <summary>
     /// Interaction logic for MenuListItem.xaml

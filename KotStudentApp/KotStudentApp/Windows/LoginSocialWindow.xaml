@@ -13,7 +13,7 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="{Binding Title}" Height="450" Width="600">
+        Title="{Binding Title}" Height="600" Width="950">
 
     <Window.Resources>
         <local:BooleanToVisibilityConverter x:Key="BoolenToVisibleConverter"/>

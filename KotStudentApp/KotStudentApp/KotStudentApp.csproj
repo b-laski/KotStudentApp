@@ -127,6 +127,9 @@
     <Compile Include="AttachedProperty\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperty\IsBusyProperty.cs" />
     <Compile Include="AttachedProperty\NoFrameHistory.cs" />
+    <Compile Include="Controls\MainBar\MainBar.xaml.cs">
+      <DependentUpon>MainBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
     <Compile Include="Windows\LoginSocialWindow.xaml.cs">
       <DependentUpon>LoginSocialWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\MainBar\MainBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -260,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Backgrounds\LoginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\40-backgrounds-material.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

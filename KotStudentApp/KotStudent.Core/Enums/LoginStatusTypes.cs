@@ -1,4 +1,4 @@
-﻿namespace KotStudent.Core
+﻿namespace KotStudentApp.Core
 {
     public enum LoginStatusTypes
     {

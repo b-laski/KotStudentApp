@@ -1,5 +1,4 @@
-﻿using KotStudent.Core;
-using KotStudentApp.Core;
+﻿using KotStudentApp.Core;
 using System;
 using System.Windows;
 
@@ -10,6 +9,9 @@ namespace KotStudentApp
     /// </summary>
     public partial class LoginSocialWindow : Window
     {
+        public delegate void LoginStatus(object sender, LoginStatusTypes Type);
+        public event LoginStatus Status;
+
         public LoginSocialWindow(LoginSocialTypes Type)
         {
             InitializeComponent();
@@ -26,15 +28,16 @@ namespace KotStudentApp
             }
         }
 
-        private void SignIn(string accessToken)
+        private async void SignIn(string accessToken)
         {
-            if (StudentAPI.StudentAPI.SetSession("facebook", accessToken))
+            if (await StudentAPI.StudentAPI.SetSessionAsync("facebook", accessToken))
             {
                 IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.DashboardScreen);
+                Status?.Invoke(this, LoginStatusTypes.Success);
             }
             else
             {
-
+                Status?.Invoke(this, LoginStatusTypes.Fail);
             }
         }
     }
