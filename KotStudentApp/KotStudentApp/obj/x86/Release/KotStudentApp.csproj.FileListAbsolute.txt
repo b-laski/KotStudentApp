@@ -1,7 +1,5 @@
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\KotStudentApp.csprojResolveAssemblyReference.cache
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Menu.g.cs
-D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuItem.g.cs
-D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuListItem.g.cs
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PageHost.g.cs
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Profile\Profile.g.cs
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\MainWindow.g.cs
@@ -42,8 +40,6 @@ D:\KotStudentApp\KotStudentApp\KotStudentApp\bin\x86\Release\StudentAPI.pdb
 D:\KotStudentApp\KotStudentApp\KotStudentApp\bin\x86\Release\Newtonsoft.Json.xml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\App.baml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Menu.baml
-D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuItem.baml
-D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\MenuItems\MenuListItem.baml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PageHost.baml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\Profile\Profile.baml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\MainWindow.baml

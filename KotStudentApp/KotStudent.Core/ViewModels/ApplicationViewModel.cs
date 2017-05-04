@@ -10,7 +10,9 @@
         /// </summary>
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.LoginScreen;
 
-        public bool TitleMenu { get; set; }
+        public bool MainBar { get; set; }
+
+        public bool Drawer { get; set; } = false;
 
         /// <summary>
         /// Navigates to the specified page
@@ -21,10 +23,14 @@
             // Set the current page
             CurrentPage = page;
 
+            Drawer = page == ApplicationPage.Profile;
+
             if (CurrentPage != ApplicationPage.LoginScreen && CurrentPage != ApplicationPage.RegisterScreen)
-                TitleMenu = true;
+                MainBar = true;
             else
-                TitleMenu = false;
+                MainBar = false;
+
+
         }
     }
 }
