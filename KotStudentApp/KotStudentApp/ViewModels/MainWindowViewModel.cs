@@ -120,7 +120,6 @@ namespace KotStudentApp
             MaximalizationCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
             UserProfileCommand = new RelayCommand(async () => await ProfilAsync());
-            MessageCommand = new RelayCommand(async () => await Test());
             #endregion
 
             wWindowResizer = new WindowResizer(mWindow);
@@ -145,13 +144,6 @@ namespace KotStudentApp
         private async Task ProfilAsync()
         {
             IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Profile);
-
-            await Task.Delay(1);
-        }
-
-        private async Task Test()
-        {
-            IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.DashboardScreen);
 
             await Task.Delay(1);
         }

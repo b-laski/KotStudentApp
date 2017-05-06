@@ -11,6 +11,9 @@ namespace KotStudentApp.Core
         LoginScreen = 0,
         RegisterScreen = 1,
         DashboardScreen = 2,
-        Profile = 3
+        Profile = 3,
+        FavouriteGroups = 4,
+        Group = 5,
+        LoadingScreen
     }
 }

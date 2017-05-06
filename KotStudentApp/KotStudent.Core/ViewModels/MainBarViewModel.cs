@@ -15,7 +15,7 @@ namespace KotStudentApp.Core
 
         #region Public Properties
 
-        public bool ShowHideMenuProperty { get; set; }
+        public bool ShowHideMenuProperty { get; set; } = false;
 
         #endregion
 
@@ -42,6 +42,8 @@ namespace KotStudentApp.Core
 
         private async Task ShowMenu()
         {
+            IoC.Get<ApplicationViewModel>().OpenHideMenu(true);
+            await IoC.Get<ApplicationViewModel>().LoadAll();
 
             await Task.Delay(1);
         }

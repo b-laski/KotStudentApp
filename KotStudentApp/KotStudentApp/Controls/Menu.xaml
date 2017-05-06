@@ -8,13 +8,14 @@
              xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
              xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
+             Width="300"
              d:DesignHeight="600" d:DesignWidth="300">
 
     <UserControl.Template>
         <ControlTemplate TargetType="UserControl">
             <Border Background="{DynamicResource MaterialDesignPaper}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                     <Grid>
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="150" />
                             <RowDefinition Height="Auto"/>
@@ -23,8 +24,10 @@
                         </Grid.RowDefinitions>
 
                         <!--Profile-->
+
                         <Border Grid.Row="0"
                                 Effect="{DynamicResource MaterialDesignShadowDepth1}">
+
                             <Grid>
                                 <Grid.Background>
                                     <ImageBrush ImageSource="D:\KotStudentApp\KotStudentApp\KotStudentApp\Images\Backgrounds\40-backgrounds-material.jpg" />
@@ -35,35 +38,35 @@
                                 </Grid.RowDefinitions>
 
                                 <Grid Grid.Row="0"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Bottom"
-                                        Margin="15 0">
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Bottom"
+                                Margin="15 0">
                                     <Border Background="White" 
-                                            Height="60"
-                                            Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
-                                            CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+                                    Height="60"
+                                    Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
                                         <!-- Profile picture initials -->
                                         <TextBlock Text="BŁ"
-                                                    FontSize="20"
-                                                    VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"/>
+                                            FontSize="20"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"/>
                                     </Border>
                                 </Grid>
 
                                 <StackPanel Grid.Row="1"
-                                            Margin="15 5 0 15">
-                                
+                                        Margin="15 5 0 15">
+
                                     <!--Name-->
-                                    <TextBlock Text="Bartłomiej Łaski"
-                                                Margin="0 5"
-                                                Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                                                TextTrimming="CharacterEllipsis"/>
-                                
+                                    <TextBlock Text="{Binding Item.Name}"
+                                        Margin="0 5"
+                                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                        TextTrimming="CharacterEllipsis"/>
+
                                     <!--E-mail-->
-                                    <TextBlock Text="tajfun695@gmail.com"
-                                                Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                                                TextTrimming="CharacterEllipsis"/>
-                                
+                                    <TextBlock Text="{Binding Item.Email}"
+                                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                        TextTrimming="CharacterEllipsis"/>
+
                                 </StackPanel>
                             </Grid>
                         </Border>
@@ -71,11 +74,12 @@
                         <!--Upeer part of menu-->
                         <StackPanel Grid.Row="1">
                             <Button Background="Transparent" 
+                                    Command="{Binding Dashboard}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
                                     Margin="10 0">
-                            
+
                                 <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center">
@@ -92,6 +96,7 @@
                             </Button>
 
                             <Button Background="Transparent" 
+                                    Command="{Binding Favourite}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
@@ -112,7 +117,8 @@
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Transparent" 
+                            <Button Background="Transparent"
+                                    Command="{Binding Group}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
@@ -139,11 +145,12 @@
                         <Separator Grid.Row="2" 
                                    Width="Auto" 
                                    Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
-                        
+
                         <!--Down part of menu-->
                         <StackPanel Grid.Row="3">
-                            
-                            <Button Background="Transparent" 
+
+                            <Button Background="Transparent"
+                                    Command="{Binding Settings}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
@@ -163,8 +170,9 @@
                                                 Foreground="{DynamicResource MaterialDesignBodyLight}"/>
                                 </StackPanel>
                             </Button>
-                            
+
                             <Button Background="Transparent" 
+                                    Command="{Binding Feedback}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
@@ -177,15 +185,16 @@
                                                        VerticalAlignment="Center"
                                                        HorizontalAlignment="Center"
                                                        Foreground="{DynamicResource MaterialDesignBodyLight}"/>
-                                    <TextBlock  Text="Podziel się wrażeniami"
+                                    <TextBlock  Text="Pomoc i opinie"
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
                                                 Margin="10 0 0 0"
                                                 Foreground="{DynamicResource MaterialDesignBodyLight}"/>
                                 </StackPanel>
                             </Button>
-                            
+
                             <Button Background="Transparent" 
+                                    Command="{Binding Logout}"
                                     Height="56"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Left"
@@ -205,16 +214,13 @@
                                                 Foreground="{DynamicResource MaterialDesignBodyLight}"/>
                                 </StackPanel>
                             </Button>
-                            
+
                         </StackPanel>
-                    </Grid>                    
+                    </Grid>
                 </ScrollViewer>
 
-            </Border>           
+            </Border>
         </ControlTemplate>
     </UserControl.Template>
-
-    <Grid>
-    </Grid>
 
 </UserControl>

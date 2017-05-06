@@ -28,7 +28,9 @@
                         Width="36"
                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}">
                     
-                    <material:PackIcon Kind="Menu"
+                    <material:PackIcon Kind="Menu" 
+                                       Width="26"
+                                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
                 </Button>
 

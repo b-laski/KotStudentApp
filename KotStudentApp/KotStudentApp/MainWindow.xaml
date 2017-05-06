@@ -165,8 +165,7 @@
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Opacity="0.55" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
-            
-            
+
             <Grid>
                 <Grid.RowDefinitions>
                     <!--TopBar-->
@@ -191,13 +190,13 @@
             
             <!--Przyciemnienie-->
             <Rectangle Fill="Black"
+                       MouseDown="Rectangle_MouseDown"
                        local:ShowHideRectangle.Value="{Binding ApplicationViewModel.Drawer, 
                                     Source={x:Static local:ViewModelLocator.Instance}}"/>
             <!--Menu-->
-            <local:Menu Width="300"
-                        HorizontalAlignment="Left"
+            <local:Menu HorizontalAlignment="Left"
                         local:ShowHideMenuAnimation.Value="{Binding ApplicationViewModel.Drawer,
-                                    Source={x:Static local:ViewModelLocator.Instance}}"
+                                        Source={x:Static local:ViewModelLocator.Instance}}"
                         Effect="{DynamicResource MaterialDesignShadowDepth3}"/>
         </Grid>
     </Border>

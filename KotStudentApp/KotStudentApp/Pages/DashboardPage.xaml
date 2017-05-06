@@ -13,6 +13,7 @@
         <TextBlock VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Foreground="Black"
-                   Text="KotStudent Aplikacja"/>
+                   FontSize="36"
+                   Text="{Binding HelloMessage}"/>
     </Border>
 </local:BasePage>

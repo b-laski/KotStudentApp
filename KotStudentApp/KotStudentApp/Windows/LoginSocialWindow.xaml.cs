@@ -32,7 +32,7 @@ namespace KotStudentApp
         {
             if (await StudentAPI.StudentAPI.SetSessionAsync("facebook", accessToken))
             {
-                IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.DashboardScreen);
+                IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.LoadingScreen);
                 Status?.Invoke(this, LoginStatusTypes.Success);
             }
             else

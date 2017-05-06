@@ -127,6 +127,18 @@
     <Compile Include="AttachedProperty\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperty\IsBusyProperty.cs" />
     <Compile Include="AttachedProperty\NoFrameHistory.cs" />
+    <Compile Include="Controls\GroupThreads\GroupThreadItem.xaml.cs">
+      <DependentUpon>GroupThreadItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Group\GroupItem.xaml.cs">
+      <DependentUpon>GroupItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Group\GroupItemList.xaml.cs">
+      <DependentUpon>GroupItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingControl.xaml.cs">
+      <DependentUpon>LoadingControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MainBar\MainBar.xaml.cs">
       <DependentUpon>MainBar.xaml</DependentUpon>
     </Compile>
@@ -139,11 +151,23 @@
     <Compile Include="Controls\Profile\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Profile\ProfilMenu.xaml.cs">
+      <DependentUpon>ProfilMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\UserProfilPage.xaml.cs">
-      <DependentUpon>UserProfilPage.xaml</DependentUpon>
+    <Compile Include="Pages\FavouriteGroupsPage.xaml.cs">
+      <DependentUpon>FavouriteGroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GroupsPage.xaml.cs">
+      <DependentUpon>GroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilPage.xaml.cs">
+      <DependentUpon>ProfilPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
@@ -156,6 +180,7 @@
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="ValueConverters\MaleOrFemaleConverter.cs" />
     <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\LoginSocialWindowViewModel.cs" />
@@ -163,6 +188,22 @@
     <Compile Include="Windows\LoginSocialWindow.xaml.cs">
       <DependentUpon>LoginSocialWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\GroupThreads\GroupThreadItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Group\GroupItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Group\GroupItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LoadingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\MainBar\MainBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -176,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Profile\Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Profile\ProfilMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +240,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\FavouriteGroupsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GroupsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoadingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -203,7 +260,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\UserProfilPage.xaml">
+    <Page Include="Pages\ProfilPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -257,6 +314,7 @@
   <ItemGroup>
     <Resource Include="Images\Backgrounds\40-backgrounds-material.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

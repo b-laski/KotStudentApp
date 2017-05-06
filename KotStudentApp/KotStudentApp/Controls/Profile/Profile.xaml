@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KotStudentApp"
+             xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
              mc:Ignorable="d" 
+             DataContext="{x:Static core:ProfilViewModel.Instance}"
              d:DesignHeight="600" d:DesignWidth="800">
     
     <Border>
@@ -46,11 +48,21 @@
                             VerticalAlignment="Bottom"
                             Margin="5">
                     
-                    <TextBlock Text="TEST TEST"
+                    <TextBlock Text="{Binding Name}"
                                Margin="5 0"
                                FontSize="36"/>
-                    <TextBlock Text="Male"
-                               Margin="5 0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Płeć: "
+                                   Margin="5 0"/>
+                        <TextBlock Text="{Binding Gender}"
+                                   Margin="5 0"/>                        
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Zarejstrowany od: "
+                                   Margin="5 0"/>
+                        <TextBlock Text="{Binding RegisterTime}"
+                                   Margin="5 0"/>
+                    </StackPanel>
 
                 </StackPanel>
 
@@ -58,7 +70,7 @@
 
             <!--MoreInfo-->
             <Grid Grid.Row="1" Background="{DynamicResource MaterialDesignPaper}">
-
+                
             </Grid>
             
         </Grid>

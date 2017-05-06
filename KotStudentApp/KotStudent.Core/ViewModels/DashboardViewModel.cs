@@ -8,6 +8,8 @@ namespace KotStudentApp.Core
 {
     public class DashboardViewModel : ViewModelBase
     {
+        public string HelloMessage { get; set; } = "Witaj w aplikacji Kot #Student!";
+
         public DashboardViewModel()
         {
 

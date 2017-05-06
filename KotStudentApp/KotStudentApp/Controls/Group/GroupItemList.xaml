@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="KotStudentApp.GroupItemList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KotStudentApp"
+             xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="900">
+
+    <UserControl.Resources>
+        <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <Grid>
+                            <ScrollViewer VerticalScrollBarVisibility="Visible" Panel.ZIndex="1">
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <ItemContainerTemplate>
+                                            <local:GroupItem MouseDown="GroupItem_MouseDown"/>
+                                        </ItemContainerTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+                            <materialDesign:PopupBox Panel.ZIndex="2"
+                                                         Style="{DynamicResource MaterialDesignMultiFloatingActionAccentPopupBox}"
+                                                         Margin="30 20"
+                                                         HorizontalAlignment="Right"
+                                                         VerticalAlignment="Bottom"
+                                                         PlacementMode="TopAndAlignCentres"
+                                                         ToolTipService.Placement="Left">
+                                <StackPanel>
+                                    <Button ToolTip="Dodaj"
+                                            Command="{Binding AddButon}">
+                                        <materialDesign:PackIcon Kind="Plus"/>
+                                    </Button>
+                                    <Button ToolTip="Usuń">
+                                        <materialDesign:PackIcon Kind="Delete"/>
+                                    </Button>
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                        </Grid>                       
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <ContentControl d:DataContext="{x:Static core:GroupItemListDesign.InstanceDesign}"
+                    DataContext="{x:Static core:GroupItemListViewModel.Instance}"
+                    Style="{StaticResource ContentStyle}" />
+</UserControl>

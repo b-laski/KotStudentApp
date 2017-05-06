@@ -1,0 +1,23 @@
+﻿<local:BasePage x:TypeArguments="core:LoadingScreenViewModel" x:Class="KotStudentApp.LoadingScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:KotStudentApp"
+      xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="LoadingScreen">
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="Zdawanie sesji..."
+                   FontSize="24"
+                   Margin="10"/>
+        <ProgressBar Width="24"
+                    Foreground="{DynamicResource SecondaryAccentBrush}"
+                    Style="{DynamicResource MaterialDesignCircularProgressBar}" 
+                    IsIndeterminate="True"/>
+    </StackPanel>
+</local:BasePage>
