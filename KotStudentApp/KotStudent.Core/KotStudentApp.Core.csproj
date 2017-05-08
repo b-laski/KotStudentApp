@@ -126,6 +126,7 @@
     <Compile Include="ViewModels\Design\GroupItemListDesign.cs" />
     <Compile Include="ViewModels\Design\ProfileDesignViewModel.cs" />
     <Compile Include="ViewModels\FavouritePageViewModel.cs" />
+    <Compile Include="ViewModels\GroupPreview\GroupPreview.cs" />
     <Compile Include="ViewModels\GroupsPageViewModel.cs" />
     <Compile Include="ViewModels\Groups\GroupItemListViewModel.cs" />
     <Compile Include="ViewModels\Groups\GroupItemViewModel.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainBarViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\PostPreview\PostPreview.cs" />
     <Compile Include="ViewModels\Profile\ProfilViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\PageViewModel.cs" />

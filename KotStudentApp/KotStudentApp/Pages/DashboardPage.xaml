@@ -6,14 +6,16 @@
       xmlns:local="clr-namespace:KotStudentApp"
       xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="DashboardPage">
 
     <Border>
-        <TextBlock VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="Black"
-                   FontSize="36"
-                   Text="{Binding HelloMessage}"/>
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <VirtualizingStackPanel>
+                <local:PostPreviewList />
+                <local:PostPreviewList />
+                <local:PostPreviewList />
+            </VirtualizingStackPanel>
+        </ScrollViewer>
     </Border>
 </local:BasePage>

@@ -30,7 +30,7 @@
 
                             <Grid>
                                 <Grid.Background>
-                                    <ImageBrush ImageSource="D:\KotStudentApp\KotStudentApp\KotStudentApp\Images\Backgrounds\40-backgrounds-material.jpg" />
+                                    <ImageBrush ImageSource="/Images\Backgrounds\40-backgrounds-material.jpg" />
                                 </Grid.Background>
                                 <Grid.RowDefinitions>
                                     <RowDefinition />

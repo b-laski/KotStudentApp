@@ -1,5 +1,6 @@
 ﻿
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\App.xaml;;
+FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\GroupPreview\GroupPreview.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\GroupThreads\GroupThreadItem.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Group\GroupItem.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Group\GroupItemList.xaml;;
@@ -7,6 +8,7 @@ FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\LoadingControl.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\MainBar\MainBar.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Menu.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\PageHost.xaml;;
+FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\PostPreview\PostPreview.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Profile\Profile.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Profile\ProfilMenu.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\MainWindow.xaml;;
@@ -18,4 +20,5 @@ FD:\KotStudentApp\KotStudentApp\KotStudentApp\Pages\LoginPage.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Pages\RegisterPage.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Pages\ProfilPage.xaml;;
 FD:\KotStudentApp\KotStudentApp\KotStudentApp\Windows\LoginSocialWindow.xaml;;
+FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\PostPreview\PostPreviewList.xaml;;
 

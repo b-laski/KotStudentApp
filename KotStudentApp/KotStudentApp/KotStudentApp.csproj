@@ -127,6 +127,9 @@
     <Compile Include="AttachedProperty\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperty\IsBusyProperty.cs" />
     <Compile Include="AttachedProperty\NoFrameHistory.cs" />
+    <Compile Include="Controls\GroupPreview\GroupPreview.xaml.cs">
+      <DependentUpon>GroupPreview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\GroupThreads\GroupThreadItem.xaml.cs">
       <DependentUpon>GroupThreadItem.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,12 @@
     </Compile>
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PostPreview\PostPreview.xaml.cs">
+      <DependentUpon>PostPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PostPreview\PostPreviewList.xaml.cs">
+      <DependentUpon>PostPreviewList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Profile\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
@@ -188,6 +197,10 @@
     <Compile Include="Windows\LoginSocialWindow.xaml.cs">
       <DependentUpon>LoginSocialWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\GroupPreview\GroupPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\GroupThreads\GroupThreadItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,6 +226,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\PageHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PostPreview\PostPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PostPreview\PostPreviewList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -306,15 +327,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Backgrounds\emoji-background.png" />
+    <Resource Include="Images\Backgrounds\emoji-background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Backgrounds\LoginBackground.jpg" />
+    <Resource Include="Images\Backgrounds\LoginBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Backgrounds\40-backgrounds-material.jpg" />
+    <Resource Include="Images\Backgrounds\40-backgrounds-material.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\Filofax-Notebook-Review.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
