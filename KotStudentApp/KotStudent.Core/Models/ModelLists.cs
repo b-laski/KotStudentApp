@@ -9,10 +9,10 @@ namespace KotStudentApp.Core
 
         public StudentAPI.Models.API.User user;
 
-        public List<StudentAPI.Models.API.Group.Groups> groupList;
+        public List<StudentAPI.Models.API.Group.Groups> groupList = new List<StudentAPI.Models.API.Group.Groups>();
 
-        public List<StudentAPI.Models.API.Collage.College> collagerList;
+        public List<StudentAPI.Models.API.Collage.College> collagerList = new List<StudentAPI.Models.API.Collage.College>();
 
-        public List<StudentAPI.Models.API.Threads.Thread> threadList;
+        public List<StudentAPI.Models.API.Threads.Thread> threadList = new List<StudentAPI.Models.API.Threads.Thread>();
     }
 }

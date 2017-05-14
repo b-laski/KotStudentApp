@@ -36,6 +36,9 @@ namespace KotStudentApp
                 case ApplicationPage.LoadingScreen:
                     return new LoadingScreen();
 
+                case ApplicationPage.ThreadPage:
+                    return new ThreadPage();
+
                 default:
                     Debugger.Break();
                     return null;

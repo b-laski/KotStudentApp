@@ -12,7 +12,7 @@ namespace KotStudentApp.Core
 
         private async void LoadAll()
         {
-            await Task.Delay(3000);
+            await Task.Delay(1000);
             await IoC.Get<ApplicationViewModel>().LoadAll();
             IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.DashboardScreen);
         }

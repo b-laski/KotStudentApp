@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KotStudentApp.Core.ViewModels.GroupThreads
+﻿namespace KotStudentApp.Core
 {
-    class GroupThreadItemViewModel : ViewModelBase
+    public class GroupThreadItemViewModel : ViewModelBase
     {
         public int ThreadID { get; set; }
 

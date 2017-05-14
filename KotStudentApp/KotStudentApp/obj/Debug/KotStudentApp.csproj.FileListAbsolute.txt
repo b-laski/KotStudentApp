@@ -32,3 +32,6 @@ D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\KotStudentApp.exe
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\KotStudentApp.pdb
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\Windows\LoginSocialWindow.g.cs
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\Windows\LoginSocialWindow.baml
+E:\KotStudentApp\KotStudentApp\KotStudentApp\bin\Debug\KotStudentApp.exe.config
+E:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\KotStudentApp.exe
+E:\KotStudentApp\KotStudentApp\KotStudentApp\obj\Debug\KotStudentApp.pdb

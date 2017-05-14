@@ -14,6 +14,7 @@ namespace KotStudentApp.Core
         Profile = 3,
         FavouriteGroups = 4,
         Group = 5,
-        LoadingScreen
+        LoadingScreen = 6,
+        ThreadPage = 7
     }
 }

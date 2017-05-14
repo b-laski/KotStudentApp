@@ -46,5 +46,11 @@ namespace KotStudentApp.Core
             ModelLists.Instance.groupList = await StudentAPI.StudentAPI.GetMyGroupsListAsync();
             ModelLists.Instance.collagerList = await StudentAPI.StudentAPI.GetCollegeListAsync();
         }
+
+        public async Task LoadThread(int threadID)
+        {
+            ModelLists.Instance.threadList = await StudentAPI.StudentAPI.GetThreadsListAsync(threadID);
+            await Task.Delay(1000);
+        }
     }
 }

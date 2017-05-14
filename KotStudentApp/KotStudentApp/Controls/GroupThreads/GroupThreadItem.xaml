@@ -3,51 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:KotStudentApp"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:local="clr-namespace:KotStudentApp"
+             mc:Ignorable="d"
+             Margin="2"
+             d:DesignHeight="56" d:DesignWidth="300">
+
     <UserControl.Resources>
         <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
-                        <materialDesign:Card Margin="4 4 0 0" Width="200">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="140" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Image Source="/Images/Backgrounds/40-backgrounds-material.jpg" Height="140" Width="196" Stretch="UniformToFill" />
-                                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
-                                    <TextBlock FontWeight="Bold" Text="{Binding GroupName}"/>
-                                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding GroupType}"/>
-                                </StackPanel>
-                                <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
-                                    <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
-                                            materialDesign:RippleAssist.IsCentered="True">
-                                        <materialDesign:PackIcon Kind="ShareVariant" />
-                                    </Button>
-                                    <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
-                                            materialDesign:RippleAssist.IsCentered="True">
-                                        <materialDesign:PackIcon Kind="Heart" />
-                                    </Button>
-                                    <materialDesign:PopupBox Padding="2 0 2 0">
-                                        <StackPanel>
-                                            <Button Content="More"/>
-                                            <Button Content="Options"/>
-                                        </StackPanel>
-                                    </materialDesign:PopupBox>
-                                </StackPanel>
+                        <Border CornerRadius="2"
+                                Effect="{DynamicResource MaterialDesignShadowDepth1}">
+                            <Grid Background="{DynamicResource MaterialDesignPaper}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0"
+                                        MinHeight="24"
+                                        Height="Auto"
+                                        Margin="12"
+                                        Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                        CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                        Effect="{DynamicResource MaterialDesignShadowDepth1}">
+                                    <!-- Profile picture initials -->
+                                    <Ellipse HorizontalAlignment="Stretch"
+                                             VerticalAlignment="Stretch">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="/images/backgrounds/avatar.png"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                </Border>
+
+                                <Grid Grid.Column="1"
+                                        Margin="6">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0"
+                                                VerticalAlignment="Bottom"
+                                                HorizontalAlignment="Stretch"
+                                                FontWeight="Bold"
+                                                Text="{Binding Title}"/>
+                                    <TextBlock Grid.Row="1" 
+                                                VerticalAlignment="Top"
+                                                HorizontalAlignment="Stretch"
+                                                Text="{Binding CreatorName}" 
+                                                FontSize="9"/>
+                                </Grid>
+
+                                <materialDesign:PopupBox Padding="2 0 2 0"
+                                                         Grid.Column="2"
+                                                         Width="46">
+                                    <StackPanel>
+                                        <Button Content="Read"/>
+                                        <Button Content="Delete"
+                                                Command="{Binding DeleteCommand}"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
                             </Grid>
-                        </materialDesign:Card>
+                        </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
     </UserControl.Resources>
 
-    <ContentControl d:DataContext="{x:Static core:GroupDesignViewModel.Instance}"
-                    Style="{StaticResource ContentStyle}" />
+    <ContentControl Style="{StaticResource ContentStyle}"/>
+
 </UserControl>

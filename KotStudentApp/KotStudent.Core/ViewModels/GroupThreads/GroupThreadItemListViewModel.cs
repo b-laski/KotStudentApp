@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace KotStudentApp.Core.ViewModels.GroupThreads
+namespace KotStudentApp.Core
 {
-    class GroupThreadItemListViewModel : ViewModelBase
+    public class GroupThreadItemListViewModel : ViewModelBase
     {
-        public GroupThreadItemListViewModel Instance { get; set; } = new GroupThreadItemListViewModel();
+        public static GroupThreadItemListViewModel Instance { get; set; } = new GroupThreadItemListViewModel();
 
-        public List<GroupThreadItemViewModel> Items { get; set; }
+        public List<GroupThreadItemViewModel> Items { get; set; } = new List<GroupThreadItemViewModel>();
 
         public GroupThreadItemListViewModel()
         {
-            Items = new List<GroupThreadItemViewModel>();
+            Items.Clear();
             foreach (var item in ModelLists.Instance.threadList)
             {
                 Items.Add(new GroupThreadItemViewModel

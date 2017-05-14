@@ -77,3 +77,7 @@ D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PostPrevie
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PostPreview\PostPreview.baml
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PostPreview\PostPreviewList.g.cs
 D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\PostPreview\PostPreviewList.baml
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\GroupThreads\GroupThreadItemsList.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Controls\GroupThreads\GroupThreadItemsList.baml
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\ThreadPage.g.cs
+D:\KotStudentApp\KotStudentApp\KotStudentApp\obj\x86\Release\Pages\ThreadPage.baml

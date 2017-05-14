@@ -133,6 +133,9 @@
     <Compile Include="Controls\GroupThreads\GroupThreadItem.xaml.cs">
       <DependentUpon>GroupThreadItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GroupThreads\GroupThreadItemsList.xaml.cs">
+      <DependentUpon>GroupThreadItemsList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Group\GroupItem.xaml.cs">
       <DependentUpon>GroupItem.xaml</DependentUpon>
     </Compile>
@@ -178,6 +181,9 @@
     <Compile Include="Pages\ProfilPage.xaml.cs">
       <DependentUpon>ProfilPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ThreadPage.xaml.cs">
+      <DependentUpon>ThreadPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BoolenToVisibleConverter.cs" />
@@ -204,6 +210,10 @@
     <Page Include="Controls\GroupThreads\GroupThreadItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GroupThreads\GroupThreadItemsList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\Group\GroupItem.xaml">
       <SubType>Designer</SubType>
@@ -285,6 +295,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ThreadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\LoginSocialWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -345,6 +359,14 @@
     <Resource Include="Images\Backgrounds\Filofax-Notebook-Review.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\avatar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Cover\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
