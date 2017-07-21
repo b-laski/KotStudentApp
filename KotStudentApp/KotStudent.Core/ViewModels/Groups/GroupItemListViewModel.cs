@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -13,13 +10,9 @@ namespace KotStudentApp.Core
 
         #region Properties
 
-        public List<GroupItemViewModel> Items { get; set; }
+        public bool Searched { get; set; } = false;
 
-        #endregion
-
-        #region Commands
-
-        public ICommand AddButon { get; set; }
+        public ObservableCollection<GroupItemViewModel> Items { get; set; } = new ObservableCollection<GroupItemViewModel>();
 
         #endregion
 
@@ -27,7 +20,6 @@ namespace KotStudentApp.Core
 
         public GroupItemListViewModel()
         {
-            AddButon = new RelayCommand(async () => await ShowCard());
             LoadDataContext();
         }
 
@@ -36,21 +28,48 @@ namespace KotStudentApp.Core
         #region Methods
         public void LoadDataContext()
         {
-            Items = new List<GroupItemViewModel>();
-            foreach (var item in ModelLists.Instance.groupList)
+            if(ModelLists.Instance.groupList != null)
             {
-                Items.Add(new GroupItemViewModel
+                Items.Clear();
+                foreach (var item in ModelLists.Instance.groupList)
                 {
-                    ID = item.GroupId,
-                    GroupName = item.GroupName,
-                    GroupType = item.GroupType
-                });
+                    Items.Add(new GroupItemViewModel
+                    {
+                        GroupID = item.GroupId,
+                        GroupName = item.GroupName,
+                        GroupType = item.GroupType,
+                        MemberId = item.MemberId
+
+                    });
+                }
             }
+            else
+            {
+                Items = null;
+            }
+
         }
 
-        private async Task ShowCard()
+        public void LoadSearchedGroup()
         {
-            await Task.Delay(1);
+            if (ModelLists.Instance.searchedModels.Groups != null)
+            {
+                Items.Clear();
+                foreach (var item in ModelLists.Instance.searchedModels.Groups)
+                {
+                    Items.Add(new GroupItemViewModel
+                    {
+                        GroupID = item.ID,
+                        GroupName = item.Name,
+                        GroupType = item.Description
+
+                    });
+                }
+            }
+            else
+            {
+                Items = null;
+            }
         }
 
         #endregion

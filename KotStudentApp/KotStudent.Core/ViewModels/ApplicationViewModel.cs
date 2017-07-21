@@ -16,6 +16,11 @@ namespace KotStudentApp.Core
 
         public bool Drawer { get; set; }
 
+        public static int ThreadID { get; set; }
+
+        public int PostID { get; set; }
+
+
         /// <summary>
         /// Navigates to the specified page
         /// </summary>
@@ -49,8 +54,22 @@ namespace KotStudentApp.Core
 
         public async Task LoadThread(int threadID)
         {
-            ModelLists.Instance.threadList = await StudentAPI.StudentAPI.GetThreadsListAsync(threadID);
-            await Task.Delay(1000);
+            ModelLists.Instance.Threads = await StudentAPI.StudentAPI.GetThreadsListAsync(threadID);
+            await Task.Delay(1);
+        }
+
+        public async Task LoadPosts(int postID)
+        {
+            ModelLists.Instance.postList = await StudentAPI.StudentAPI.GetPostListAsync(postID,0);
+            ThreadID = postID;
+            await Task.Delay(1);
+        }
+
+        public async Task Search(string searchString)
+        {
+            ModelLists.Instance.searchedModels = await StudentAPI.StudentAPI.Search(searchString);
+            await Task.Delay(1);
+            IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.SearchPage);
         }
     }
 }

@@ -62,6 +62,7 @@ namespace KotStudentApp.Core
             IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Group);
             await Task.Delay(150);
             IoC.Get<ApplicationViewModel>().OpenHideMenu(false);
+
         }
     }
 }

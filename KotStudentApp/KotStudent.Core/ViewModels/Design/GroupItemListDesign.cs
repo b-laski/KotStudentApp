@@ -12,7 +12,7 @@ namespace KotStudentApp.Core
 
         public GroupItemListDesign()
         {
-            Items = new List<GroupItemViewModel>
+            Items = new System.Collections.ObjectModel.ObservableCollection<GroupItemViewModel>
             {
                 new GroupItemViewModel
                 {

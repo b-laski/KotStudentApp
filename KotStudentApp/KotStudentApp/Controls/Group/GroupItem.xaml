@@ -38,7 +38,8 @@
                                 <materialDesign:PopupBox Padding="2 0 2 0">
                                     <StackPanel>
                                         <Button Content="More"/>
-                                        <Button Content="Options"/>
+                                        <Button Content="Leave"
+                                                Command="{Binding LeaveCommand}"/>
                                     </StackPanel>
                                 </materialDesign:PopupBox>
                             </StackPanel>

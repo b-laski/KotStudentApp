@@ -8,7 +8,7 @@ namespace KotStudentApp.Core.ViewModels.Design
 {
     public class ProfileDesignViewModel : ProfilViewModel
     {
-        public static ProfileDesignViewModel Instance => new ProfileDesignViewModel();
+        public static ProfileDesignViewModel Instancee => new ProfileDesignViewModel();
 
         public ProfileDesignViewModel()
         {

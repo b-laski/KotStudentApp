@@ -11,6 +11,17 @@ namespace KotStudentApp
         public GroupsPage()
         {
             InitializeComponent();
+
+            if(GroupList != null)
+            {
+                GroupList.Visibility = System.Windows.Visibility.Visible;
+                NoGroupMessage.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            else
+            {
+                NoGroupMessage.Visibility = System.Windows.Visibility.Visible;
+                GroupList.Visibility = System.Windows.Visibility.Collapsed;
+            }
         }
     }
 }

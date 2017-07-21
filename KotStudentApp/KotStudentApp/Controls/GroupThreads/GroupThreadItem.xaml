@@ -17,6 +17,7 @@
                         <Border CornerRadius="2"
                                 Effect="{DynamicResource MaterialDesignShadowDepth1}">
                             <Grid Background="{DynamicResource MaterialDesignPaper}">
+                                
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition />

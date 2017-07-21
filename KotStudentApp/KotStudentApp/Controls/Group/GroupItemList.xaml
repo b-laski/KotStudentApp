@@ -15,38 +15,24 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
                         <Grid>
-                            <ScrollViewer VerticalScrollBarVisibility="Visible" Panel.ZIndex="1">
-                                <ItemsControl ItemsSource="{Binding Items}">
-                                    <ItemsControl.ItemsPanel>
-                                        <ItemsPanelTemplate>
-                                            <WrapPanel Orientation="Horizontal" />
-                                        </ItemsPanelTemplate>
-                                    </ItemsControl.ItemsPanel>
-                                    <ItemsControl.ItemTemplate>
-                                        <ItemContainerTemplate>
-                                            <local:GroupItem MouseDown="GroupItem_MouseDown"/>
-                                        </ItemContainerTemplate>
-                                    </ItemsControl.ItemTemplate>
-                                </ItemsControl>
-                            </ScrollViewer>
-
-                            <materialDesign:PopupBox Panel.ZIndex="2"
-                                                         Style="{DynamicResource MaterialDesignMultiFloatingActionAccentPopupBox}"
-                                                         Margin="30 20"
-                                                         HorizontalAlignment="Right"
-                                                         VerticalAlignment="Bottom"
-                                                         PlacementMode="TopAndAlignCentres"
-                                                         ToolTipService.Placement="Left">
-                                <StackPanel>
-                                    <Button ToolTip="Dodaj"
-                                            Command="{Binding AddButon}">
-                                        <materialDesign:PackIcon Kind="Plus"/>
-                                    </Button>
-                                    <Button ToolTip="Usuń">
-                                        <materialDesign:PackIcon Kind="Delete"/>
-                                    </Button>
-                                </StackPanel>
-                            </materialDesign:PopupBox>
+                            <Grid x:Name="Content"
+                                  Panel.ZIndex="0"
+                                  Visibility="Visible">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" Panel.ZIndex="1">
+                                    <ItemsControl ItemsSource="{Binding Items}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel Orientation="Horizontal" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <ItemContainerTemplate>
+                                                <local:GroupItem MouseDown="GroupItem_MouseDown"/>
+                                            </ItemContainerTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </ScrollViewer>
+                            </Grid>
                         </Grid>                       
                     </ControlTemplate>
                 </Setter.Value>
@@ -55,6 +41,5 @@
     </UserControl.Resources>
 
     <ContentControl d:DataContext="{x:Static core:GroupItemListDesign.InstanceDesign}"
-                    DataContext="{x:Static core:GroupItemListViewModel.Instance}"
                     Style="{StaticResource ContentStyle}" />
 </UserControl>

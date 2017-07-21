@@ -10,9 +10,13 @@
       Title="GroupsPage">
 
     <Grid>
-        <local:GroupItemList />
-        
-        
+        <local:GroupItemList Visibility="Collapsed"
+                             x:Name="GroupList"/>
+
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="Niestety nie należysz do żadnej grupy"
+                   Name="NoGroupMessage"/>
     </Grid>
     
 </local:BasePage>

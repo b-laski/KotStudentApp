@@ -127,8 +127,29 @@
     <Compile Include="AttachedProperty\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperty\IsBusyProperty.cs" />
     <Compile Include="AttachedProperty\NoFrameHistory.cs" />
-    <Compile Include="Controls\GroupPreview\GroupPreview.xaml.cs">
-      <DependentUpon>GroupPreview.xaml</DependentUpon>
+    <Compile Include="Controls\Colleges\CollageItem.xaml.cs">
+      <DependentUpon>CollageItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Colleges\CollegeItemList.xaml.cs">
+      <DependentUpon>CollegeItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Courses\CourseItem.xaml.cs">
+      <DependentUpon>CourseItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Courses\CourseItemList.xaml.cs">
+      <DependentUpon>CourseItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Deparments\DeparmentItemList.xaml.cs">
+      <DependentUpon>DeparmentItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Deparments\DepartmentItem.xaml.cs">
+      <DependentUpon>DepartmentItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GroupSearch\GroupSearchItem.xaml.cs">
+      <DependentUpon>GroupSearchItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GroupSearch\GroupSearchItemList.xaml.cs">
+      <DependentUpon>GroupSearchItemList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\GroupThreads\GroupThreadItem.xaml.cs">
       <DependentUpon>GroupThreadItem.xaml</DependentUpon>
@@ -154,17 +175,23 @@
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PostPreview\PostPreview.xaml.cs">
-      <DependentUpon>PostPreview.xaml</DependentUpon>
+    <Compile Include="Controls\PostPreview\PostItemView.xaml.cs">
+      <DependentUpon>PostItemView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PostPreview\PostPreviewList.xaml.cs">
-      <DependentUpon>PostPreviewList.xaml</DependentUpon>
+    <Compile Include="Controls\PostPreview\PostItemListView.xaml.cs">
+      <DependentUpon>PostItemListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Profile\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Profile\ProfilMenu.xaml.cs">
       <DependentUpon>ProfilMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchUser\UserItem.xaml.cs">
+      <DependentUpon>UserItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchUser\UserItemList.xaml.cs">
+      <DependentUpon>UserItemList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
@@ -178,8 +205,14 @@
     <Compile Include="Pages\LoadingScreen.xaml.cs">
       <DependentUpon>LoadingScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PostPage.xaml.cs">
+      <DependentUpon>PostPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProfilPage.xaml.cs">
       <DependentUpon>ProfilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ThreadPage.xaml.cs">
       <DependentUpon>ThreadPage.xaml</DependentUpon>
@@ -203,7 +236,35 @@
     <Compile Include="Windows\LoginSocialWindow.xaml.cs">
       <DependentUpon>LoginSocialWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\GroupPreview\GroupPreview.xaml">
+    <Page Include="Controls\Colleges\CollageItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Colleges\CollegeItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Courses\CourseItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Courses\CourseItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Deparments\DeparmentItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Deparments\DepartmentItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GroupSearch\GroupSearchItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GroupSearch\GroupSearchItemList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,11 +300,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PostPreview\PostPreview.xaml">
+    <Page Include="Controls\PostPreview\PostItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PostPreview\PostPreviewList.xaml">
+    <Page Include="Controls\PostPreview\PostItemListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -252,6 +313,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Profile\ProfilMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SearchUser\UserItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SearchUser\UserItemList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -287,11 +356,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProfilPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -366,6 +443,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\Search\" />
     <Folder Include="Images\Cover\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -103,7 +103,13 @@
     <Compile Include="ViewModels\Base\BoolenRelayCommand.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
+    <Compile Include="ViewModels\Collages\CollegeItemViewModel.cs" />
+    <Compile Include="ViewModels\Collages\CollegeItemListViewModel.cs" />
+    <Compile Include="ViewModels\Courses\SearchedGroupItemListViewModel.cs" />
+    <Compile Include="ViewModels\Courses\SearchedGroupItemViewModel.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Departments\DepartmentItemListViewModel.cs" />
+    <Compile Include="ViewModels\Departments\DepartmentItemViewModel.cs" />
     <Compile Include="ViewModels\Design\GroupItemDesignModel.cs" />
     <Compile Include="ViewModels\Design\GroupItemListDesign.cs" />
     <Compile Include="ViewModels\Design\ProfileDesignViewModel.cs" />
@@ -118,11 +124,16 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainBarViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
-    <Compile Include="ViewModels\PostPreview\PostPreview.cs" />
+    <Compile Include="ViewModels\PostPageViewModel.cs" />
+    <Compile Include="ViewModels\PostPreview\PostItemListViewModel.cs" />
+    <Compile Include="ViewModels\PostPreview\PostItemViewModel.cs" />
     <Compile Include="ViewModels\Profile\ProfilViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\PageViewModel.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\ThreadPageViewModel.cs" />
+    <Compile Include="ViewModels\Users\UserItemListViewModel.cs" />
+    <Compile Include="ViewModels\Users\UserItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />

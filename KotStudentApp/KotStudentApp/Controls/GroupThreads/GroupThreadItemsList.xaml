@@ -5,8 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KotStudentApp"
              xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.DataContext>
+        <core:GroupThreadItemListViewModel/>
+    </UserControl.DataContext>
     <UserControl.Resources>
         <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
             <Setter Property="Template">
@@ -14,7 +19,8 @@
                     <ControlTemplate TargetType="{x:Type ContentControl}">
                         <Grid>
                             <ScrollViewer VerticalScrollBarVisibility="Visible" Panel.ZIndex="1">
-                                <ItemsControl ItemsSource="{Binding Items}">
+                                <ItemsControl ItemsSource="{Binding Items}"
+                                              Margin="8 6">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <VirtualizingStackPanel Orientation="Vertical" />
@@ -22,11 +28,68 @@
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>
                                         <ItemContainerTemplate>
-                                            <local:GroupThreadItem/>
+                                            <local:GroupThreadItem MouseDown="GroupThreadItem_MouseDown"/>
                                         </ItemContainerTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
                             </ScrollViewer>
+
+                            <Grid Panel.ZIndex="2"
+                                  Visibility="{Binding CreateThreadWindow}">
+
+                                <Rectangle Fill="Black" Opacity="0.2" /> 
+
+                                <Grid Height="150"
+                                      Width="250"
+                                      Background="{DynamicResource MaterialDesignPaper}"
+                                      >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Stworz wątek"
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Bottom"
+                                               Margin="4"/>
+
+                                    <TextBox Grid.Row="1" 
+                                             Margin="4"
+                                             materialDesign:HintAssist.Hint="Nazwa wątku"
+                                             Text="{Binding Title, Mode=TwoWay}"/>
+
+                                    <StackPanel Grid.Row="3"
+                                                Orientation="Horizontal"
+                                                HorizontalAlignment="Right"
+                                                Margin="4">
+                                        <Button Margin="4"
+                                                Content="Anuluj"
+                                                Command="{Binding CancelAddingThread}"/>
+                                        <Button Margin="4"
+                                                Content="Stwórz"
+                                                Command="{Binding CreateThread}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                            <materialDesign:PopupBox Panel.ZIndex="2"
+                                                         Style="{DynamicResource MaterialDesignMultiFloatingActionAccentPopupBox}"
+                                                         Margin="30 20"
+                                                         HorizontalAlignment="Right"
+                                                         VerticalAlignment="Bottom"
+                                                         PlacementMode="TopAndAlignCentres"
+                                                         ToolTipService.Placement="Left">
+                                <StackPanel>
+                                    <Button ToolTip="Dodaj"
+                                            Command="{Binding AddThread}">
+                                        <materialDesign:PackIcon Kind="Plus"/>
+                                    </Button>
+                                    <Button ToolTip="Usuń">
+                                        <materialDesign:PackIcon Kind="Delete"/>
+                                    </Button>
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                            
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -34,6 +97,5 @@
         </Style>
     </UserControl.Resources>
 
-    <ContentControl DataContext="{x:Static core:GroupThreadItemListViewModel.Instance}"
-                    Style="{StaticResource ContentStyle}" />
+    <ContentControl Style="{StaticResource ContentStyle}" />
 </UserControl>

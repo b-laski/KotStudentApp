@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace KotStudentApp.Core
 {
@@ -13,6 +12,10 @@ namespace KotStudentApp.Core
 
         public List<StudentAPI.Models.API.Collage.College> collagerList = new List<StudentAPI.Models.API.Collage.College>();
 
-        public List<StudentAPI.Models.API.Threads.Thread> threadList = new List<StudentAPI.Models.API.Threads.Thread>();
+        public StudentAPI.Models.API.Threads.ThreadsGroup Threads;
+
+        public List<StudentAPI.Models.API.PostComent.Post> postList = new List<StudentAPI.Models.API.PostComent.Post>();
+
+        public StudentAPI.Models.API.Search searchedModels;
     }
 }

@@ -16,7 +16,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0">
@@ -37,8 +37,14 @@
             </Border>
 
             <!--DODATKOWE MENU USERA!-->
-            <Border Grid.Column="1">
-                
+            <Border Grid.Column="1" Margin="8" Width="450" HorizontalAlignment="Left">
+                <Grid Background="{DynamicResource MaterialDesignPaper}"
+                      Opacity="0.8">
+                    <TextBox x:Name="SearchingBox"
+                             material:HintAssist.Hint="Szukaj"
+                             Margin="8,2" 
+                             KeyDown="TextBox_KeyDown"/>
+                </Grid>
             </Border>
 
         </Grid>  

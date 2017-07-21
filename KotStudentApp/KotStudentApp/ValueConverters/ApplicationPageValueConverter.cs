@@ -39,6 +39,12 @@ namespace KotStudentApp
                 case ApplicationPage.ThreadPage:
                     return new ThreadPage();
 
+                case ApplicationPage.PostPage:
+                    return new PostPage();
+
+                case ApplicationPage.SearchPage:
+                    return new SearchPage();
+
                 default:
                     Debugger.Break();
                     return null;

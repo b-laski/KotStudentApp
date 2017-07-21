@@ -4,14 +4,12 @@
     {
         public int ThreadID { get; set; }
 
+        public int GroupID { get; set; }
+
         public string Title { get; set; }
 
         public bool isPinned { get; set; }
 
-        public int? CreatorId { get; set; }
-
-        public string CreatorName { get; set; }
-
-        public string CreatorPhoto { get; set; }
+        public StudentAPI.Models.API.User Creator { get; set; }
     }
 }
