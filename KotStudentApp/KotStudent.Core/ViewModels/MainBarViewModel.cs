@@ -7,11 +7,25 @@ namespace KotStudentApp.Core
 {
     public class MainBarViewModel : ViewModelBase
     {
+        #region Private members
+
         private UserControl mUserControl;
 
-        public bool ShowHideMenuProperty { get; set; }
+        #endregion
+
+        #region Public Properties
+
+        public bool ShowHideMenuProperty { get; set; } = false;
+
+        #endregion
+
+        #region Commands
 
         public ICommand ShowHideMenuButton { get; set; }
+
+        #endregion
+
+        #region CTORS
 
         public MainBarViewModel(UserControl userControl)
         {
@@ -19,14 +33,22 @@ namespace KotStudentApp.Core
 
             ShowHideMenuProperty = true;
 
-            ShowHideMenuButton = new BoolenRelayCommand(async (parameter) => await DoSomething(parameter));
+            ShowHideMenuButton = new RelayCommand(async () => await ShowMenu());
         }
 
-        private async Task DoSomething(object parameter)
+        #endregion
+
+        #region Methods
+
+        private async Task ShowMenu()
         {
-            ShowHideMenuProperty ^= ShowHideMenuProperty;
+            IoC.Get<ApplicationViewModel>().OpenHideMenu(true);
+            await IoC.Get<ApplicationViewModel>().LoadAll();
 
             await Task.Delay(1);
         }
+
+        #endregion
+
     }
 }

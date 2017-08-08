@@ -27,7 +27,7 @@ namespace KotStudentApp.Core
 
         public async Task LoginAsync()
         {
-            IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.DashboardScreen);
+            IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.LoadingScreen);
 
             await Task.Delay(1);
         }

@@ -74,7 +74,7 @@ namespace KotStudentApp
         /// <summary>
         /// TitibleBar height
         /// </summary>
-        public int TitleHeight { get; set; } = 36;
+        public int TitleHeight { get; set; } = 24;
 
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);
 

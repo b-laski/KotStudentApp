@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KotStudentApp.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,11 @@ namespace KotStudentApp
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel(this);
+        }
+
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            IoC.Get<ApplicationViewModel>().OpenHideMenu(false);
         }
     }
 }

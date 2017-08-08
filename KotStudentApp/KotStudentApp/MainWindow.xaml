@@ -62,12 +62,12 @@
                                                    Text="{Binding Title}" 
                                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                                    VerticalAlignment="Center"
-                                                   Margin="16 8 8 8"/>
+                                                   Margin="16 0 8 0"/>
 
                                         <!-- Profile/Message... -->
                                         <Grid Grid.Column="2" 
                                               VerticalAlignment="Center"
-                                              local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.TitleMenu, 
+                                              local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.MainBar, 
                                                     Source={x:Static local:ViewModelLocator.Instance}}">
 
                                             <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal">
@@ -81,6 +81,7 @@
                                                 <Button Foreground="{DynamicResource PrimaryHueMidForegroundBrush}" 
                                                         Style="{DynamicResource MaterialDesignFlatButton}"
                                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                                        Command="{Binding MessageCommand}"
                                                         VerticalAlignment="Center">
                                                     <materialDesign:PackIcon Kind="Wechat"/>
                                                 </Button>
@@ -133,22 +134,12 @@
                                             </StackPanel>
                                         </Grid>
                                     </Grid>
-                                    
+
                                     <!--Content-->
                                     <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" ClipToBounds="True">
                                         <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
                                 </Grid>
-
-                                <Rectangle Fill="Black"
-                                           Visibility="Collapsed"
-                                           WindowChrome.IsHitTestVisibleInChrome="True"
-                                           local:ShowHideRectangle.Value="True"/>
-                                <local:Menu Width="300"
-                                            HorizontalAlignment="Left"
-                                            WindowChrome.IsHitTestVisibleInChrome="True"
-                                            local:ShowHideMenuAnimation.Value="True"
-                                            Effect="{DynamicResource MaterialDesignShadowDepth3}"/>
                             </Grid>
 
                         </Border>
@@ -172,7 +163,7 @@
         <Grid>
             <!--Background-->
             <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Opacity="0.55" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
 
             <Grid>
@@ -184,7 +175,7 @@
                 </Grid.RowDefinitions>
 
                 <local:MainBar Grid.Row="0"
-                               local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.TitleMenu, 
+                               local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.MainBar, 
                                                             Source={x:Static local:ViewModelLocator.Instance}}"/>
 
                 <Border Grid.Row="1">
@@ -196,6 +187,17 @@
                                     CurrentPage="{Binding}" />
                 </Border>
             </Grid>
+            
+            <!--Przyciemnienie-->
+            <Rectangle Fill="Black"
+                       MouseDown="Rectangle_MouseDown"
+                       local:ShowHideRectangle.Value="{Binding ApplicationViewModel.Drawer, 
+                                    Source={x:Static local:ViewModelLocator.Instance}}"/>
+            <!--Menu-->
+            <local:Menu HorizontalAlignment="Left"
+                        local:ShowHideMenuAnimation.Value="{Binding ApplicationViewModel.Drawer,
+                                        Source={x:Static local:ViewModelLocator.Instance}}"
+                        Effect="{DynamicResource MaterialDesignShadowDepth3}"/>
         </Grid>
     </Border>
 </Window>

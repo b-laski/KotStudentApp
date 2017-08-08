@@ -25,7 +25,25 @@ namespace KotStudentApp
                     return new DashboardPage();
 
                 case ApplicationPage.Profile:
-                    return new UserProfilPage();
+                    return new ProfilPage();
+
+                case ApplicationPage.FavouriteGroups:
+                    return new FavouriteGroupsPage();
+
+                case ApplicationPage.Group:
+                    return new GroupsPage();
+
+                case ApplicationPage.LoadingScreen:
+                    return new LoadingScreen();
+
+                case ApplicationPage.ThreadPage:
+                    return new ThreadPage();
+
+                case ApplicationPage.PostPage:
+                    return new PostPage();
+
+                case ApplicationPage.SearchPage:
+                    return new SearchPage();
 
                 default:
                     Debugger.Break();

@@ -125,7 +125,7 @@ namespace KotStudentApp
             await Task.Delay((int)(seconds * 1000));
         }
 
-        public static async Task ShowMenu(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        public static async Task ShowMenu(this FrameworkElement element, float seconds = 0.6f, bool keepMargin = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -143,7 +143,7 @@ namespace KotStudentApp
             await Task.Delay((int)(seconds * 1000));
         }
 
-        public static async Task HideMenu(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
+        public static async Task HideMenu(this FrameworkElement element, float seconds = 0.6f, bool keepMargin = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -237,6 +237,8 @@ namespace KotStudentApp
 
             // Wait for it to finish
             await Task.Delay((int)(seconds * 1000));
+
+            element.Visibility = Visibility.Collapsed;
         }
     }
 }

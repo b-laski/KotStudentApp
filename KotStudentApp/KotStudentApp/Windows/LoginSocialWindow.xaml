@@ -57,7 +57,7 @@
                                                    Text="{Binding Title}" 
                                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                                    VerticalAlignment="Center"
-                                                   Margin="16 8 8 8"/>
+                                                   Margin="16 0 8 0"/>
 
                                         <!--Window Minimalization/Maximalization/Close Buttons-->
                                         <Grid Grid.Column="2"

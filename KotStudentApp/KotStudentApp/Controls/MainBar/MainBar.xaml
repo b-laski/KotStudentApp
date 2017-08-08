@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:KotStudentApp"
              mc:Ignorable="d" 
              
@@ -15,24 +16,35 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0">
-                <CheckBox Margin="16 8"
+                <Button Margin="16 8"
+                        Style="{DynamicResource MaterialDesignToolButton}"
                         Command="{Binding ShowHideMenuButton}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}" 
-                        Style="{DynamicResource MaterialDesignHamburgerToggleButton}"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Width="24"
-                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"/>
-                
+                        Width="36"
+                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}">
+                    
+                    <material:PackIcon Kind="Menu" 
+                                       Width="26"
+                                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                       Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                </Button>
+
             </Border>
 
             <!--DODATKOWE MENU USERA!-->
-            <Border Grid.Column="1">
-                
+            <Border Grid.Column="1" Margin="8" Width="450" HorizontalAlignment="Left">
+                <Grid Background="{DynamicResource MaterialDesignPaper}"
+                      Opacity="0.8">
+                    <TextBox x:Name="SearchingBox"
+                             material:HintAssist.Hint="Szukaj"
+                             Margin="8,2" 
+                             KeyDown="TextBox_KeyDown"/>
+                </Grid>
             </Border>
 
         </Grid>  

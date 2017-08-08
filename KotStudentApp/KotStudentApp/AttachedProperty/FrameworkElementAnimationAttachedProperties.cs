@@ -114,4 +114,17 @@ namespace KotStudentApp
                 await element.FadeOutForRectagle(FirstLoad ? 0 : 0.3f, keepMargin: false);
         }
     }
+
+    public class FadeAnimation : AnimateBaseProperty<FadeAnimation>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value)
+        {
+            if (value)
+                // Animate in
+                await element.FadeIn(FirstLoad ? 0 : 0.3f, keepMargin: false);
+            else
+                // Animate out
+                await element.FadeOut(FirstLoad ? 0 : 0.3f, keepMargin: false);
+        }
+    }
 }

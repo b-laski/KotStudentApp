@@ -6,13 +6,22 @@
       xmlns:local="clr-namespace:KotStudentApp"
       xmlns:core="clr-namespace:KotStudentApp.Core;assembly=KotStudentApp.Core"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="DashboardPage">
 
-    <Border>
+    <StackPanel VerticalAlignment="Center"
+                HorizontalAlignment="Center">
         <TextBlock VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="Black"
-                   Text="KotStudent Aplikacja"/>
-    </Border>
+                   HorizontalAlignment="Center" 
+                   Text="Aplikacja Kot #Student Beta 0.0.5"
+                   FontSize="36"
+                   FontWeight="Bold"/>
+
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center" 
+                   Text="Pozdrowionka XD"
+                   FontSize="24"
+                   FontWeight="Thin"/>
+
+    </StackPanel>
 </local:BasePage>
