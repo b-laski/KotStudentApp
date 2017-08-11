@@ -1,8 +1,15 @@
 ﻿
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\App.xaml;;
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\Controls\PageHost.xaml;;
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\MainWindow.xaml;;
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\Pages\LoginPage.xaml;;
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\Pages\RegisterPage.xaml;;
-FD:\KotStudentApp\KotStudentApp\KotStudentApp\Windows\LoginSocialWindow.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\App.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\MainBar\MainBar.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Menu.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\MenuItems\MenuItem.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\MenuItems\MenuListItem.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\PageHost.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Controls\Profile\Profile.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\MainWindow.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Pages\DashboardPage.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Pages\LoginPage.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Pages\RegisterPage.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Pages\UserProfilPage.xaml;;
+FC:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudentApp\Windows\LoginSocialWindow.xaml;;
 

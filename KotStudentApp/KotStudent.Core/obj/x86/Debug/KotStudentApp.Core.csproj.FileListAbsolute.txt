@@ -11,3 +11,14 @@ D:\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\Newtonsoft.Json.xml
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudentApp.Core.csprojResolveAssemblyReference.cache
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudent.Core.dll
 D:\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudent.Core.pdb
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudentApp.Core.csprojResolveAssemblyReference.cache
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\KotStudentApp.Core.dll
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\KotStudentApp.Core.pdb
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\Ninject.dll
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\StudentAPI.dll
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\Ninject.xml
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\StudentAPI.pdb
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudentApp.Core.dll
+C:\Users\Comarch\Desktop\Kotek\KotekApp\KotStudentApp\KotStudentApp\KotStudent.Core\obj\x86\Debug\KotStudentApp.Core.pdb
